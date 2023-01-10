@@ -1,1 +1,2 @@
-# OOP--task2
+# OOP project 2 
+## about the project 
