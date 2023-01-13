@@ -65,6 +65,10 @@ but, for bigger projects (as can be seen in the 100 + files) using the threads t
 
 # part 2
 
+## UML
+![Picture2](https://user-images.githubusercontent.com/118693941/212294438-40b3f918-21cd-4f3f-83cb-6db0e7687be3.png)
+
+
 
 
 
