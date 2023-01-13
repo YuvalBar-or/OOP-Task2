@@ -93,15 +93,17 @@ it has 3 methods:
   
 ### CustomExecuter
 this class extends ThreadPoolExecutor class. <br /> 
-
- CustomExecutor uses a PriorityBlockingQueue to hold the MyFuture tasks, this queue is able to hold a collection of tasks and orders them based on the priority of each task. It also keeps track of the number of tasks for each priority using an array priorityCounts.
-
-The class has four constructors: A default constructor that creates a new thread pool with the number of available processors in the system and a default PriorityBlockingQueue and defines some properties such as core pool size, maximum pool size and keep-alive time. It overrides the newTaskFor method from ThreadPoolExecutor to return a MyFuture object for a new task, this method is used to create new instances of MyFuture for the ThreadPoolExecutor to use when a new task is submitted. It also has three methods that are used to submit a task to the thread pool:
-
-submit(Task task): which is used to submit a Task object to the thread pool and increments the priority count
-submit (Callable task, TaskType taskType): which is used to submit a Callable task with a TaskType object to the thread pool
-submit (Callable task): which is used to submit a Callable task with TaskType object is set to OTHER It also has two methods:
-getCurrentMax() which returns the current maximum priority count. gracefullyTerminate() which calls the shutdown() method of the ThreadPoolExecutor to terminate the thread pool. It also overrides the beforeExecute method to decrement the priority count of the task before it is executed. This CustomExecutor allows to schedule and execute the tasks according to the priority assigned to them and it also allows tracking the number of tasks for each priority
+it uses a PriorityBlockingQueue to hold the NewFuture tasks, this queue is able to hold a collection of tasks and orders them based on the priority of each task. <br /> 
+ 
+ method in the class: 
+ * constructor 
+ * getCurrentMax()
+ * newTask(Task task): returns a new future for a task
+ * submitTask(Task task) : is used to submit tasks to the ThreadPoolExecutor.
+ * submit(Task task): used to submit a Task object to the thread pool and increments the priority count.
+ * submit (Callable task, TaskType taskType): which is used to submit a Callable task with a TaskType object to the thread pool.
+ * submit(Callable<T> callable): he function creates a Task from the callable and  default priority which is OTHER(3) and activate the submitTask on them.
+ * gracefullyTerminate() :function that shuts down the ThreadPoolExecutor and making the isShutdown flag true so that you cant submit more tasks to the ThreadPoolExecutor.
 
 ## UML
 ![Picture2](https://user-images.githubusercontent.com/118693941/212294438-40b3f918-21cd-4f3f-83cb-6db0e7687be3.png)
