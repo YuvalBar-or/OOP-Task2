@@ -31,7 +31,7 @@ this class, implements the "Callable" interface. this class has 2 method :
 ### 10 files 
 number of lines : 34
 * getNumOfLines : 1ms
-* getNumOfLinesThreads : 1ms 
+* getNumOfLinesThreads : 2ms 
 * getNumOfLinesThreadPool :3 ms 
 
 ### 100 files 
@@ -53,10 +53,14 @@ number of lines : 1982659
 * getNumOfLinesThreadPool : 270 ms 
 
 ### explanation 
+as we can see, using the TreadPool method was the least affective method out of the 3. 
+thats because in order to use thread or threadpool you'll need to allocate resources from the operating system, therefore for small projects (as can be seem in the 10 file calculations) its less affective. 
+but, for bigger projects (as can be seen in the 100 + files) using the threads to calculate the number of lines was more affective.
+
+## UML
 
 
-
-
+![Picture1](https://user-images.githubusercontent.com/118693941/212293982-9e4fbbdc-43e3-4865-91c3-be4bb659eb38.png)
 
 
 
