@@ -1,6 +1,5 @@
 # OOP project 2 
 # part 1
-## about the project 
 in this part of the project, we are using verious functions to work with text files, and calculate the number of lines in each file. 
 
 ## the used mothods 
@@ -64,6 +63,24 @@ but, for bigger projects (as can be seen in the 100 + files) using the threads t
 
 
 # part 2
+## classes
+### TaskType
+the enum class "TaskType" has 3 fixed values: 
+* COMPUTATIONAL : with priority 1.
+* IO : with priority 2. 
+* OTHER : with priority 3. <br />
+and the following functions as methods : 
+* typePriority
+* setPriority
+* getPriorityValue
+* validatePriority
+
+
+
+
+
+
+
 
 ## UML
 ![Picture2](https://user-images.githubusercontent.com/118693941/212294438-40b3f918-21cd-4f3f-83cb-6db0e7687be3.png)
