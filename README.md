@@ -11,6 +11,10 @@ in this part of the project, we are using verious functions to work with text fi
 
 #### explanation 
 createTextFiles : method used to make the textfiles. 
-getNumOfLines : 
+getNumOfLines : normal method.
+getNumOfLinesThreads : method with the use of threads. 
+getNumOfLinesThreadPool : method with the use of threadpool. 
+
+### classes
 
 
