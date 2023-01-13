@@ -19,8 +19,63 @@ getNumOfLinesThreadPool : method with the use of threadpool.
 ### ThreadHelper
 this class, extends the "Thread" class. this class has 3 methods : 
 * a constructor which gets a String name as a parameter and passes it to the super constructor. 
-* the run method: this method reads a file and counts the number of lines in it. 
+* run method: this method reads a file and counts the number of lines in it. 
 * getcount: getter for count. 
+
+### ThreadPoolHelper
+this class, implements the "Callable" interface. this class has 2 method : 
+* a constructor which gets a String name as a parameter.
+* call method : this method reads a file and counts the number of lines in it. 
+
+## time measures 
+### 10 files 
+number of lines : 34
+* getNumOfLines : 1ms
+* getNumOfLinesThreads : 1ms 
+* getNumOfLinesThreadPool :3 ms 
+
+### 100 files 
+number of lines : 5672
+* getNumOfLines : 5ms
+* getNumOfLinesThreads : 4 ms
+* getNumOfLinesThreadPool : 34 ms 
+
+### 1000 files 
+number of lines : 526701
+* getNumOfLines : 47 ms 
+* getNumOfLinesThreads : 27 ms
+* getNumOfLinesThreadPool : 136 ms
+
+### 2000 files 
+number of lines : 1982659
+* getNumOfLines : 89 ms 
+* getNumOfLinesThreads : 68 ms  
+* getNumOfLinesThreadPool : 270 ms 
+
+### explanation 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
