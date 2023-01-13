@@ -69,11 +69,14 @@ the enum class "TaskType" has 3 fixed values:
 * COMPUTATIONAL : with priority 1.
 * IO : with priority 2. 
 * OTHER : with priority 3. <br />
+<br />
 and the following functions as methods : 
 * typePriority
 * setPriority
 * getPriorityValue
 * validatePriority
+
+
 
 
 
